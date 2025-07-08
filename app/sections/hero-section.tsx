@@ -80,15 +80,16 @@ const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 60%;
 
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
     gap: 1rem;
 
-    button, a {
+    button,
+    a {
       width: 100%; /* Make buttons full width on mobile */
     }
   }
-`;
+`
