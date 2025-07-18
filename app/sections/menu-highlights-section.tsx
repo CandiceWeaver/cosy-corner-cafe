@@ -8,12 +8,17 @@ import theme from '@/globalTheme';
 
 const MenuHighlightsSection = () => {
   return (
-    <SectionOuterContainer backgroundColor={theme.colors.secondary}>
+    <SectionOuterContainer backgroundColor={theme.colors.secondary} id='menu'>
       <h3>Menu Highlights</h3>
       <MenuGrid>
         <MenuBox>
           <h4>Coffee</h4>
-            <p><em>Freshly brewed specialty coffees, perfect for your daily pick-me-up.</em></p>
+          <p>
+            <em>
+              Freshly brewed specialty coffees, perfect for your daily
+              pick-me-up.
+            </em>
+          </p>
           <p>Signature Flat White – £3.20</p>
           <p>Vanilla Cold Brew – £3.80</p>
           <p>Mocha Magic – £3.50</p>
@@ -21,7 +26,9 @@ const MenuHighlightsSection = () => {
 
         <MenuBox>
           <h4>Pastries</h4>
-            <p><em>Handmade daily—flaky, sweet, and perfect with your coffee.</em></p>
+          <p>
+            <em>Handmade daily—flaky, sweet, and perfect with your coffee.</em>
+          </p>
           <p>Almond Croissant – £2.60</p>
           <p>Choco Swirl Danish – £2.80</p>
           <p>Blueberry Muffin – £2.50</p>
@@ -29,17 +36,19 @@ const MenuHighlightsSection = () => {
 
         <MenuBox>
           <h4>Light Meals</h4>
-            <p><em>Wholesome bites made with fresh, seasonal ingredients.</em></p>
+          <p>
+            <em>Wholesome bites made with fresh, seasonal ingredients.</em>
+          </p>
           <p>Avocado Toast – £5.00</p>
           <p>Caprese Salad – £4.80</p>
           <p>Soup of the Day – £4.20</p>
         </MenuBox>
       </MenuGrid>
-<StyledButtonWrapper>
-  <Button text='Download Full Menu (PDF)' customWidth='20rem' />
-</StyledButtonWrapper>
+      <StyledButtonWrapper>
+        <Button text='Download Full Menu (PDF)' customWidth='20rem' />
+      </StyledButtonWrapper>
     </SectionOuterContainer>
-  );
+  )
 };
 
 export default MenuHighlightsSection;

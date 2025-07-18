@@ -7,25 +7,42 @@ import styled from 'styled-components'
 
 const UpcomingEvents = () => {
   return (
-   <SectionOuterContainer backgroundColor={theme.colors.background}>
+    <SectionOuterContainer
+      backgroundColor={theme.colors.background}
+      id='events'>
       <h3>Upcoming Events</h3>
       <EventsColumn>
         <EventBox>
           <h4>Live Acoustic Night</h4>
-          <p><em>Saturday, July 13 · 7:00 PM</em></p>
-          <p>Enjoy local artists performing unplugged sets in a cozy setting. Great coffee, great tunes!</p>
+          <p>
+            <em>Saturday, July 13 · 7:00 PM</em>
+          </p>
+          <p>
+            Enjoy local artists performing unplugged sets in a cozy setting.
+            Great coffee, great tunes!
+          </p>
         </EventBox>
 
         <EventBox>
           <h4>Sunday Brunch & Board Games</h4>
-          <p><em>Sunday, July 21 · 10:00 AM – 2:00 PM</em></p>
-          <p>Bring friends or make new ones over brunch specials and our collection of board games.</p>
+          <p>
+            <em>Sunday, July 21 · 10:00 AM – 2:00 PM</em>
+          </p>
+          <p>
+            Bring friends or make new ones over brunch specials and our
+            collection of board games.
+          </p>
         </EventBox>
 
         <EventBox>
           <h4>Coffee Tasting Workshop</h4>
-          <p><em>Saturday, July 27 · 3:00 PM</em></p>
-          <p>Discover flavour profiles, learn brewing tips, and taste rare beans with our baristas.</p>
+          <p>
+            <em>Saturday, July 27 · 3:00 PM</em>
+          </p>
+          <p>
+            Discover flavour profiles, learn brewing tips, and taste rare beans
+            with our baristas.
+          </p>
         </EventBox>
       </EventsColumn>
     </SectionOuterContainer>

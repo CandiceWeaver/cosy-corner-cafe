@@ -6,19 +6,19 @@ import styled from 'styled-components'
 const Navigation = () => {
   return (
     <OuterNavContainer>
-        <InnerNavContainer>
-            <NavLink href=''>
-            <LogoContainer>
-                <LogoText>Cosy Corner Cafe</LogoText>
-            </LogoContainer>
-            </NavLink>
-            <NavLinksContainer>
-                <NavLink href="/">About Us</NavLink>
-                <NavLink href="/">Menu</NavLink>
-                <NavLink href="/">Events</NavLink>
-                <NavLink href="/">Contact</NavLink>
-                </NavLinksContainer>
-        </InnerNavContainer>
+      <InnerNavContainer>
+        <NavLink href=''>
+          <LogoContainer>
+            <LogoText>Cosy Corner Cafe</LogoText>
+          </LogoContainer>
+        </NavLink>
+        <NavLinksContainer>
+          <NavLink href='#about'>About Us</NavLink>
+          <NavLink href='#menu'>Menu</NavLink>
+          <NavLink href='#events'>Events</NavLink>
+          <NavLink href='#contact'>Contact</NavLink>
+        </NavLinksContainer>
+      </InnerNavContainer>
     </OuterNavContainer>
   )
 }

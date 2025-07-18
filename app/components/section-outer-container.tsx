@@ -2,13 +2,20 @@ import React from 'react'
 import styled from 'styled-components';
 
 interface SectionOuterContainerProps {
-    backgroundColor: string;
-  children: React.ReactNode;
+  backgroundColor: string
+  id?: string
+  children: React.ReactNode
 }
 
-const SectionOuterContainer: React.FC<SectionOuterContainerProps> = ({backgroundColor, children }) => {
+const SectionOuterContainer: React.FC<SectionOuterContainerProps> = ({
+  backgroundColor,
+  id,
+  children,
+}) => {
   return (
-    <Container $backgroundColor={backgroundColor}>{children}</Container>
+    <Container $backgroundColor={backgroundColor} id={id}>
+      {children}
+    </Container>
   )
 }
 
