@@ -72,8 +72,14 @@ const EventBox = styled.div`
   box-sizing: border-box;
   transition: transform 0.2s ease;
 
+  & p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   }
-`;
+`
