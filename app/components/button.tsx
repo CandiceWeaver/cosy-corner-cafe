@@ -49,10 +49,6 @@ const ButtonContainer = styled.a<{
     }
   }
 
-  @media (max-width: 400px) {
-    width: 100%;
-    max-width: 100%;
-  }
 `
 
 
