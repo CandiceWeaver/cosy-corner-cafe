@@ -7,7 +7,7 @@ import theme from '@/globalTheme';
 
 const Footer = () => {
   return (
-    <SectionOuterContainer backgroundColor={theme.colors.secondary}>
+    <SectionOuterContainer backgroundColor={theme.colors.primary}>
       <TopRow>
         <OpeningHours>
           <h6>🕝 Opening Hours</h6>
@@ -64,12 +64,12 @@ const TopRow = styled.div`
 const OpeningHours = styled.div`
   flex: 1;
   min-width: 200px;
+  color: ${({ theme }) => theme.colors.background};
 `
 
 const NavLinks = styled.nav`
   flex: 1;
   min-width: 200px;
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -88,7 +88,7 @@ const NavLinks = styled.nav`
     }
 
     a {
-      color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.background};
       font-weight: ${({ theme }) => theme.fontWeight.semiBold};
       text-decoration: none;
 
@@ -104,10 +104,9 @@ const NavLinks = styled.nav`
   }
 `
 
-
 const BottomRow = styled.div`
   text-align: center;
   padding-top: ${({ theme }) => theme.spacing.sm};
   font-size: 0.8rem;
-  color: ${({ theme }) => theme.colors.primary || '#ccc'};
-`;
+  color: ${({ theme }) => theme.colors.background};
+`

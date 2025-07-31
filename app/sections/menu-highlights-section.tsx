@@ -55,7 +55,6 @@ export default MenuHighlightsSection;
 
 const MenuGrid = styled.div`
   width: 100%;
-  max-width: 950px;
   display: flex;
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacing.lg};

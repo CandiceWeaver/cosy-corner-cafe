@@ -10,7 +10,7 @@ import { LogoInstagram, LogoFacebook } from 'react-ionicons';
 const ContactSection = () => {
   return (
     <SectionOuterContainer
-      backgroundColor={theme.colors.background}
+      backgroundColor={theme.colors.secondary}
       id='contact'>
       <h3>Contact Us</h3>
       <ContactContent>

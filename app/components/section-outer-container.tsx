@@ -24,7 +24,7 @@ export default SectionOuterContainer
 // Outer wrapper controls background and full-width padding
 const OuterContainer = styled.div<{ $backgroundColor?: string }>`
   width: 100%;
-  padding: ${({ theme }) => theme.spacing.xl};
+  padding: clamp(2rem, 4vw, 4rem);
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   display: flex;
   justify-content: center;
