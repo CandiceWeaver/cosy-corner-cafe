@@ -35,7 +35,7 @@ const ButtonContainer = styled.a<{
   border: 2px solid
     ${({ theme, $secondary }) =>
       $secondary ? theme.colors.secondary : theme.colors.accent};
-  transition: all 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out, transform 0.2s ease-in-out;
   cursor: pointer;
 
   &:hover {
@@ -48,7 +48,6 @@ const ButtonContainer = styled.a<{
         $secondary ? theme.colors.background : theme.colors.primary};
     }
   }
-
 `
 
 

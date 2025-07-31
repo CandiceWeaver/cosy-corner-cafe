@@ -76,6 +76,12 @@ const MenuBox = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
 `
 
 const StyledButtonWrapper = styled.div`
