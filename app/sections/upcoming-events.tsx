@@ -57,13 +57,13 @@ const EventsColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.lg};
-  margin: ${({ theme }) => theme.spacing.xl} auto;  /* center horizontally */
-  padding: 0 1rem;  /* add side padding for small screens */
+  margin: ${({ theme }) => theme.spacing.xl} auto; /* center horizontally */
+  padding: 0 1rem; /* add side padding for small screens */
 
   @media (max-width: 480px) {
-    padding: 0 ;  /* reduce padding on very small screens */
+    padding: 0 0.5rem;
   }
-`;
+`
 
 const EventBox = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};

@@ -59,22 +59,28 @@ const AboutContent = styled.div`
   flex-direction: row;
   gap: ${({ theme }) => theme.spacing.lg};
   justify-content: center;
+  align-items: center;
   margin: ${({ theme }) => theme.spacing.lg} auto 0 auto;
 
   @media (max-width: 768px) {
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing.md};
   }
-`;
+`
 
 const AboutTextContainer = styled.div`
   width: 50%;
-  height: 100%;
+  max-width: 600px;
+
+  p + p {
+    margin-top: ${({ theme }) => theme.spacing.md};
+  }
 
   @media (max-width: 768px) {
     width: 100%;
   }
-`;
+`
+
 
 const AboutImageContainer = styled.div`
   flex: 1;

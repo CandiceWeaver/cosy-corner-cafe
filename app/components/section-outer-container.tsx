@@ -32,6 +32,6 @@ const Container = styled.div<{ $backgroundColor?: string }>`
   background-color: ${({ $backgroundColor }) => $backgroundColor};
 
   @media (max-width: 600px) {
-    padding: ${({ theme }) => theme.spacing.md};
+    padding: 1.5rem;
   }
-`;
+`

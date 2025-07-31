@@ -11,47 +11,60 @@ const Footer = () => {
       <TopRow>
         <OpeningHours>
           <h6>🕝 Opening Hours</h6>
-          <p>Mon–Fri: 8:00am – 6:00pm
-            <br/>
-Sat–Sun: 9:00am – 4:00pm</p>
+          <p>
+            Mon-Fri: 8:00am - 6:00pm
+            <br />
+            Sat-Sun: 9:00am - 4:00pm
+          </p>
         </OpeningHours>
 
         <NavLinks>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href='#home'>Home</a>
+            </li>
+            <li>
+              <a href='#about'>About</a>
+            </li>
+            <li>
+              <a href='#menu'>Menu</a>
+            </li>
+            <li>
+              <a href='#contact'>Contact</a>
+            </li>
           </ul>
         </NavLinks>
       </TopRow>
 
       <BottomRow>
-        <p>© {new Date().getFullYear()} Cozy Corner Cafe. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Cozy Corner Cafe. All rights reserved.
+        </p>
       </BottomRow>
     </SectionOuterContainer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
 
 const TopRow = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: flex-start;
   gap: ${({ theme }) => theme.spacing.lg};
   margin-bottom: ${({ theme }) => theme.spacing.md};
 
   @media (max-width: 600px) {
     flex-direction: column;
+    gap: ${({ theme }) => theme.spacing.md};
+    text-align: center;
   }
-`;
-
+`
 
 const OpeningHours = styled.div`
   flex: 1;
   min-width: 200px;
-`;
+`
 
 const NavLinks = styled.nav`
   flex: 1;
@@ -59,18 +72,18 @@ const NavLinks = styled.nav`
 
   display: flex;
   flex-direction: column;
-  align-items: flex-end; 
+  align-items: flex-end;
 
   ul {
     list-style: none;
     padding: 0;
-    margin: 0;         
+    margin: 0;
 
     li {
       margin-bottom: 0.25rem;
 
       &:first-child {
-        margin-top: 0;  
+        margin-top: 0;
       }
     }
 
@@ -86,10 +99,10 @@ const NavLinks = styled.nav`
     }
   }
 
-   @media (max-width: 600px) {
-  align-items: flex-start; 
+  @media (max-width: 600px) {
+    align-items: center;
   }
-`;
+`
 
 
 const BottomRow = styled.div`

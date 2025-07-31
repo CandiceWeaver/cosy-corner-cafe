@@ -60,13 +60,14 @@ const MenuGrid = styled.div`
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacing.lg};
   justify-content: center;
-  margin: ${({ theme }) => theme.spacing.xl} 0;
+  margin: ${({ theme }) => theme.spacing.xl} 0
+    ${({ theme }) => theme.spacing.lg} 0;
 
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
   }
-`;
+`
 
 const MenuBox = styled.div`
   flex: 1 1 250px;
@@ -76,22 +77,25 @@ const MenuBox = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
-`;
+`
 
 const StyledButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: ${({ theme }) => theme.spacing.md};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
 
-  button, a {
+  button,
+  a {
     width: 20rem;
-    max-width: 90vw;  /* Responsive max width */
+    max-width: 90vw; /* Responsive max width */
   }
-  
+
   @media (max-width: 600px) {
-    button, a {
+    button,
+    a {
       width: 100%;
     }
   }
-`;
+`
 
