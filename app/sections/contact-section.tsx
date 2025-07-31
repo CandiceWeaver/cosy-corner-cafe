@@ -88,19 +88,18 @@ export default ContactSection
 
 const ContactContent = styled.div`
   width: 100%;
-  max-width: 1200px;
   margin: ${({ theme }) => theme.spacing.xl} 0;
   display: flex;
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacing.lg};
   justify-content: space-between;
-  align-items: flex-start;  /* changed to align top */
+  align-items: flex-start; /* changed to align top */
 
   @media (max-width: 768px) {
     flex-direction: column;
     margin: ${({ theme }) => theme.spacing.md} 0;
   }
-`;
+`
 
 const FormColumn = styled.div`
   width: 100%;

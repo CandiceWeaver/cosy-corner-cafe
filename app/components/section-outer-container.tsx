@@ -13,25 +13,33 @@ const SectionOuterContainer: React.FC<SectionOuterContainerProps> = ({
   children,
 }) => {
   return (
-    <Container $backgroundColor={backgroundColor} id={id}>
-      {children}
-    </Container>
+    <OuterContainer $backgroundColor={backgroundColor} id={id}>
+      <InnerContainer>{children}</InnerContainer>
+    </OuterContainer>
   )
 }
 
 export default SectionOuterContainer
 
-const Container = styled.div<{ $backgroundColor?: string }>`
+// Outer wrapper controls background and full-width padding
+const OuterContainer = styled.div<{ $backgroundColor?: string }>`
   width: 100%;
-  height: 100%;
   padding: ${({ theme }) => theme.spacing.xl};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: ${({ $backgroundColor }) => $backgroundColor};
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 600px) {
     padding: 1.5rem;
   }
+`
+
+// Inner container limits content width
+const InnerContainer = styled.div`
+  width: 100%;
+  max-width: 1200px; /* keep content from stretching too wide */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `

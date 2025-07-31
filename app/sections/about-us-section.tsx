@@ -54,7 +54,6 @@ export default AboutUsSection
 
 const AboutContent = styled.div`
   width: 100%;
-  max-width: 1200px;
   display: flex;
   flex-direction: row;
   gap: ${({ theme }) => theme.spacing.lg};

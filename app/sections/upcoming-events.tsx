@@ -53,12 +53,12 @@ export default UpcomingEvents
 
 const EventsColumn = styled.div`
   width: 100%;
-  max-width: 950px;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.lg};
   margin: ${({ theme }) => theme.spacing.xl} auto; /* center horizontally */
   padding: 0 1rem; /* add side padding for small screens */
+  text-align: center;
 
   @media (max-width: 480px) {
     padding: 0 0.5rem;
