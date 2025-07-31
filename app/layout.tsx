@@ -42,13 +42,14 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
   }
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* <<< add this */
+}
 
-  html {
-    font-size: 16px;
-    overflow-x: hidden;
-     margin: 0;
-    padding: 0;
-  }
 
   body {
     margin: 0;
@@ -133,5 +134,5 @@ const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
-`;
+`
 

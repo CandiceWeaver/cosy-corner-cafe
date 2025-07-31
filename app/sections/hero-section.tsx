@@ -36,6 +36,17 @@ const OuterContainer = styled.div`
   background-size: cover;
   background-position: bottom;
   color: ${({ theme }) => theme.colors.primary};
+
+  animation: heroZoom 6s ease-out forwards;
+
+  @keyframes heroZoom {
+    from {
+      transform: scale(1.05);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
 `
 
 const HeroContainer = styled.div`
