@@ -19,8 +19,12 @@ const Button:React.FC<ButtonProps> = ({text,secondary, customWidth}) => {
 
 export default Button
 
-const ButtonContainer = styled.a<{$secondary?: boolean; $customWidth?: string}>`
-  background-color: ${({ theme, $secondary }) => $secondary ? 'transparent' : theme.colors.accent};
+const ButtonContainer = styled.a<{
+  $secondary?: boolean
+  $customWidth?: string
+}>`
+  background-color: ${({ theme, $secondary }) =>
+    $secondary ? 'transparent' : theme.colors.accent};
   padding: ${({ theme }) => theme.spacing.sm};
   width: ${({ $customWidth }) => $customWidth ?? '100%'};
   max-width: 10rem;
@@ -28,15 +32,20 @@ const ButtonContainer = styled.a<{$secondary?: boolean; $customWidth?: string}>`
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  border: 2px solid ${({ theme, $secondary }) => $secondary ? theme.colors.secondary : theme.colors.accent};
-  transition: all 0.3s ease-in-out;
+  border: 2px solid
+    ${({ theme, $secondary }) =>
+      $secondary ? theme.colors.secondary : theme.colors.accent};
+  transition: all 0.3s ease-in-out, transform 0.2s ease-in-out;
   cursor: pointer;
 
   &:hover {
-    border-color: ${({ theme, $secondary }) => $secondary ? theme.colors.background : theme.colors.accent};
+    transform: scale(1.03);
+    border-color: ${({ theme, $secondary }) =>
+      $secondary ? theme.colors.background : theme.colors.accent};
 
     & > * {
-      color: ${({ theme, $secondary }) => $secondary ? theme.colors.background : theme.colors.primary};
+      color: ${({ theme, $secondary }) =>
+        $secondary ? theme.colors.background : theme.colors.primary};
     }
   }
 
@@ -44,7 +53,8 @@ const ButtonContainer = styled.a<{$secondary?: boolean; $customWidth?: string}>`
     width: 100%;
     max-width: 100%;
   }
-`;
+`
+
 
 const ButtonText = styled.p<{$secondary?: boolean}>`
   margin: 0;
