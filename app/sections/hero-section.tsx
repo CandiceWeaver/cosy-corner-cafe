@@ -8,17 +8,17 @@ import Button from '../components/button'
 const HeroSection = () => {
   return (
     <OuterContainer>
-        <Navigation/>
-        <HeroContainer>
-<HeroTextContainer>
-            <h1>Your Neighbourhood Coffee Escape</h1>
-            <h2>Specialty coffees & homemade treats</h2>
-            <ButtonContainer>
-                <Button text='Book a table'/>
-                <Button text='View menu' secondary/>
-                </ButtonContainer>
-            </HeroTextContainer>
-        </HeroContainer>
+      <Navigation />
+      <HeroContainer>
+        <HeroTextContainer>
+          <h1>Your Neighbourhood Coffee Escape</h1>
+          <h2>Specialty coffees & homemade treats</h2>
+          <ButtonContainer>
+            <Button text='Book a table' />
+            <Button text='View menu' secondary />
+          </ButtonContainer>
+        </HeroTextContainer>
+      </HeroContainer>
     </OuterContainer>
   )
 }
@@ -28,11 +28,15 @@ export default HeroSection
 const OuterContainer = styled.div`
   width: 100%;
   height: 95vh;
-  background-image: linear-gradient(rgba(75,46,43,0.25), rgba(75,46,43,0.25)), url('/hero.png');
+  background-image: linear-gradient(
+      rgba(75, 46, 43, 0.25),
+      rgba(75, 46, 43, 0.25)
+    ),
+    url('/hero.png');
   background-size: cover;
   background-position: bottom;
   color: ${({ theme }) => theme.colors.primary};
-`;
+`
 
 const HeroContainer = styled.div`
   max-width: 1200px;
@@ -40,15 +44,16 @@ const HeroContainer = styled.div`
   display: flex;
   align-items: center;
   margin: 0 auto;
-  padding: 4rem 2rem; /* more vertical padding */
+  padding: 4rem 2rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    justify-content: center; /* vertical centering */
-    align-items: center; /* horizontal centering */
-    height: auto; /* let content drive height */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     gap: 1.5rem;
-    padding: 3rem 1.5rem;
+    /* Bias content slightly upward by adjusting padding */
+    padding: 0 1.5rem 8rem;
   }
 `
 
@@ -106,9 +111,9 @@ const HeroTextContainer = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 70%; /* was 60% */
-  gap: 1rem;
+  justify-content: flex-start; /* align buttons from the left */
+  width: 100%; /* take full width of text container */
+  gap: 0.75rem;
 
   @media (max-width: 900px) {
     flex-direction: column;
